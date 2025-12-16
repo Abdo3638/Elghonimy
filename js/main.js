@@ -53,7 +53,7 @@ function countingOnscroll(arr, isPercentage) {
       } else {
         clearInterval(interval);
       }
-    }, 10);
+    }, 2000 / target);
   });
 }
 
