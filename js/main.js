@@ -20,6 +20,10 @@ let percentageSpans = document.querySelectorAll(".percentage");
 let stats = document.querySelector(".stats");
 let statsNumbers = document.querySelectorAll(".stats .number");
 
+// Stoping The Counting from Running with every scoll
+let skillsStarted = false;
+let statsStarted = false;
+
 // Scrolling function
 
 window.onscroll = function () {
@@ -27,10 +31,14 @@ window.onscroll = function () {
     fillerSpans.forEach((span) => {
       span.style.width = span.dataset.width;
     });
-    countingOnscroll(percentageSpans, true);
+    if (!skillsStarted) {
+      countingOnscroll(percentageSpans, true);
+      skillsStarted = true;
+    }
   }
-  if (window.scrollY >= stats.offsetTop - 250) {
+  if (window.scrollY >= stats.offsetTop - 250 && !statsStarted) {
     countingOnscroll(statsNumbers);
+    statsStarted = true;
   }
 };
 
@@ -45,7 +53,7 @@ function countingOnscroll(arr, isPercentage) {
       } else {
         clearInterval(interval);
       }
-    }, 15);
+    }, 10);
   });
 }
 
