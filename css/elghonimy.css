@@ -27,6 +27,15 @@ body {
   font-family: "Cairo", sans-serif;
 }
 
+.scroller {
+  position: fixed;
+  left: 0;
+  height: 5px;
+  background-color: #0075ff;
+  z-index: 9999;
+  transition: width 0.3s linear;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -1078,30 +1087,18 @@ header .mega-menu .links li i {
   position: relative;
 }
 
-.my-skills .level h3 + div::before {
-  content: "";
-  height: 100%;
+.my-skills .level h3 + div .filler {
+  display: block;
+  height: 100%; 
+  width: 0;
   position: absolute;
   top: 0;
   left: 0;
   background-color: var(--main-color);
+  transition: width 1s ease-in-out;
 }
 
-.my-skills .level .html::before {
-  width: 85%;
-}
-
-.my-skills .level .css::before {
-  width: 80%;
-}
-.my-skills .level .templates::before {
-  width: 70%;
-}
-.my-skills .level .java::before {
-  width: 15%;
-}
-
-.my-skills .level h3 + div::after {
+.my-skills .level .percentage {
   position: absolute;
   right: 0;
   top: -40px;
@@ -1116,21 +1113,6 @@ header .mega-menu .links li i {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.my-skills .level .html::after {
-  content: "85%";
-}
-
-.my-skills .level .css::after {
-  content: "80%";
-}
-
-.my-skills .level .templates::after {
-  content: "70%";
-}
-.my-skills .level .java::after {
-  content: "15%";
 }
 
 /* End My Skills */
@@ -1297,7 +1279,7 @@ header .mega-menu .links li i {
   border: 1px solid var(--main-color);
 }
 
-.latest-events .box .number {
+.latest-events .box span {
   padding: 15px;
   font-size: 35px;
   color: var(--main-color);
@@ -1307,7 +1289,7 @@ header .mega-menu .links li i {
   overflow: hidden;
 }
 
-.latest-events .box .number::before {
+.latest-events .box span::before {
   content: "";
   position: absolute;
   left: 0;
@@ -1318,7 +1300,7 @@ header .mega-menu .links li i {
   transition: var(--transition-duration);
 }
 
-.latest-events .box:hover .number::before {
+.latest-events .box:hover span::before {
   background-color: var(--main-color);
 }
 

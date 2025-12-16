@@ -17,6 +17,7 @@
     <title>Elghonimy</title>
   </head>
   <body>
+    <div class="scroller"></div>
     <!-- Start Header -->
     <header>
       <div class="container">
@@ -657,19 +658,20 @@
         <div class="levels">
           <div class="level">
             <h3>HTML</h3>
-            <div class="html"></div>
+            <div class="html" ><span class="filler" data-width="85%"></span><span data-number="85%" class="percentage">0%</span></div>
           </div>
           <div class="level">
             <h3>Css</h3>
-            <div class="css"></div>
+            <div class="css"><span class="filler" data-width="80%"></span><span data-number="80" class="percentage">0%</span></div>
           </div>
           <div class="level">
             <h3>Templates</h3>
-            <div class="templates"></div>
+            
+            <div class="templates"><span class="filler" data-width="70%"></span><span data-number="70" class="percentage">0%</span></div>
           </div>
           <div class="level">
             <h3>JavaScript</h3>
-            <div class="java"></div>
+            <div class="java"><span class="filler" data-width="15%"></span></span><span data-number="15" class="percentage">0%</span></div>
           </div>
         </div>
       </div>
@@ -725,31 +727,19 @@
         <div class="content">
           <div class="date">
             <div class="box">
-              <span class="number"
-                >0- <br />
-                469</span
-              >
+              <span class="days-span"></span>
               <h5>Days</h5>
             </div>
             <div class="box">
-              <span class="number"
-                >0- <br />
-                17</span
-              >
+              <span class="hours-span" ></span>
               <h5>hours</h5>
             </div>
             <div class="box">
-              <span class="number"
-                >0- <br />
-                8</span
-              >
+              <span class="minutes-span"></span>
               <h5>Minutes</h5>
             </div>
             <div class="box">
-              <span class="number"
-                >0- <br />
-                9</span
-              >
+              <span class="seconds-span"></span>
               <h5>Seconds</h5>
             </div>
           </div>
@@ -861,22 +851,22 @@
       <div class="container">
         <div class="box">
           <i class="fa-regular fa-user fa-2x"></i>
-          <span class="number">150</span>
+          <span data-number="150" class="number">0</span>
           <span class="text">Clients</span>
         </div>
         <div class="box">
           <i class="fa-solid fa-code fa-2x"></i>
-          <span class="number">135</span>
+          <span data-number="135" class="number">0</span>
           <span class="text">Projects</span>
         </div>
         <div class="box">
           <i class="fa-solid fa-earth-americas fa-2x"></i>
-          <span class="number">50</span>
+          <span data-number="50" class="number">0</span>
           <span class="text">Countries</span>
         </div>
         <div class="box">
           <i class="fa-regular fa-money-bill-1 fa-2x"></i>
-          <span class="number">500k</span>
+          <span data-number="500" class="number">0</span>
           <span class="text">Money</span>
         </div>
       </div>
@@ -980,5 +970,6 @@
       <p class="copyright">Made With Love By Elghonimy</p>
     </footer>
     <!-- End Footer -->
+     <script src="./js/main.js"></script>
   </body>
 </html>
